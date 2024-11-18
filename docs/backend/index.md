@@ -1,3 +1,5 @@
+# Backend
+
 # API Documentation
 
 ## Overview
@@ -126,7 +128,7 @@ DELETE /api/products/921f91dd-f40e-4752-9f2d-7e3c3bcde2b3
 To test the API endpoints, you can use tools like Postman or cURL.
 
 ### Create Product CURL
-  
+
    ```
      curl --location --request POST 'http://localhost:3000/api/products' \
 --header 'Content-Type: application/json' \
@@ -159,3 +161,15 @@ To test the API endpoints, you can use tools like Postman or cURL.
 
 1. Set the request type to `DELETE`.
 2. Enter the URL: `http://localhost:3000/api/products/[id]` (replace `[id]` with a valid product ID).
+
+## Testing
+
+### Unit Tests
+
+I have created unit tests for both the API endpoints and the utility functions. The tests for the utility functions were developed in such a way that they do not affect the actual JSON files. This ensures that the tests can be run safely without modifying any persistent data.
+
+- **Endpoints Testing**: The tests validate the functionality of the API endpoints for adding and deleting products, ensuring that they behave as expected under various scenarios.
+
+- **Utility Functions Testing**: The tests for utility functions verify the correctness of the logic used for adding and removing products, ensuring that they handle edge cases properly without impacting the underlying data.
+
+These tests help maintain the integrity of the application and facilitate easier debugging and feature enhancements in the future.

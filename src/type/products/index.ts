@@ -1,5 +1,5 @@
-export type Product = {
-  id: number;
+export type TProduct = {
+  id?: string;
   name: string;
   price: number;
   description: string;
@@ -8,3 +8,8 @@ export type Product = {
   numReviews: number;
   countInStock: number;
 };
+
+export enum EProductType {
+  large,
+  small
+}
